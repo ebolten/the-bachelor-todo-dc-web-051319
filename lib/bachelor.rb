@@ -4,8 +4,6 @@ def get_first_name_of_season_winner(data, season)
 
       if data[season] == "Winner"
         name = data[season]["name"]
-        index = name.index(" ")
-        name = name[0..index]
         return name
     end
   end
