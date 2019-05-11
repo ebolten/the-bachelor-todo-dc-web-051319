@@ -64,18 +64,19 @@ def get_occupation(data, hometown)
   # code here
   occupation = nil
   data.each do |season, info|
-      info.each do |element|
-        element.find do |key, value|
-          key.to_s == "occupation"
-          occupation = value.to_s
+        info.each do |element|
+          element.each do |key, value|
+            if key.to_s == "occupation"
+            occupation = value.to_s
+          end
+            if key.to_s == "hometown"
+              if value.to_s == hometown
 
-          key.to_s == "hometown"
-            value.to_s == hometown
-            return occupation
-
-
-        
-      end
+                return occupation
+              end
+            end
+          end
+        end
     end
   end
 end
