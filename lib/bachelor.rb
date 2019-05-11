@@ -72,7 +72,7 @@ def get_occupation(data, hometown)
           element.find do |key, value|
             if key.to_s == "hometown"
               value.to_s == hometown
-                
+                return occupation
           end
         end
       end
