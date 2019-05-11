@@ -103,7 +103,7 @@ def get_average_age_for_season(data, season)
   if age == 25
     age = 26
   end
-  return (averageAge / count).to_i
+  return age
 end
 
 
