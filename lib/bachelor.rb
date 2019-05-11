@@ -63,22 +63,24 @@ end
 def get_occupation(data, hometown)
   # code here
   occupation = nil
+  newHometown = nil
+
   data.each do |season, info|
       info.each do |element|
         element.each do |key, value|
-          if key.to_s == "occupation"
-            occupation = value.to_s
+          if key.to_s == "hometown"
+            if hometown.to_s == value.to_s
+              newHometown = hometown
+            end
           end
-          element.find do |key, value|
-            if key.to_s == "hometown"
-              value.to_s == hometown
-                return occupation
+          if key.to_s == "occupation" && newHometown == hometown
+            occupation = value.to_s
+            return occupation
           end
         end
       end
     end
   end
-end
 
 
 def get_average_age_for_season(data, season)
