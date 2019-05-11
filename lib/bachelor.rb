@@ -7,7 +7,6 @@ def get_first_name_of_season_winner(data, season)
         index = name.index(" ")
         name = name[0..index]
         return name
-
     end
   end
 end
