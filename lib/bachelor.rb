@@ -73,8 +73,8 @@ def get_occupation(data, hometown)
             value.to_s == hometown
             return occupation
 
-          end
-        end
+
+        
       end
     end
   end
