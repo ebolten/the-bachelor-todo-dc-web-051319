@@ -2,11 +2,12 @@ def get_first_name_of_season_winner(data, season)
   # code here
   data[season].each do |data|
 
-      if data[season]["status"] == "Winner"
+      if data[season][data] == "Winner"
+        name = data[season]["name"]
         index = name.index(" ")
         name = name[0..index]
         return name
-    
+
     end
   end
 end
