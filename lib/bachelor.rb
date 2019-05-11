@@ -34,8 +34,6 @@ def get_contestant_name(data, occupation)
           end
             if key.to_s == "occupation"
               if value.to_s == occupation
-                index = name.index(" ")
-                name = name[0..index - 1]
                 return name
               end
             end
