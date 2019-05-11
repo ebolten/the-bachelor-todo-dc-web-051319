@@ -25,8 +25,8 @@ end
 def get_contestant_name(data, occupation)
   # code here
   name = nil
-  data.each do |userSeason, info|
-      if userSeason.to_s == season
+  data.each do |season, info|
+
         info.each do |element|
           element.each do |key, value|
             if key.to_s == "name"
