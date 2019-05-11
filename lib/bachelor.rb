@@ -72,7 +72,7 @@ def get_occupation(data, hometown)
           if key.to_s == "hometown"
             if value.to_s == hometown
               return occupation
-            end
+          
           end
         end
       end
