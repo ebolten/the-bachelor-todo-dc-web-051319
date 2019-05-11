@@ -66,13 +66,13 @@ def get_occupation(data, hometown)
   data.each do |season, info|
       info.each do |element|
         element.find do |key, value|
-          if key.to_s == "occupation"
-            occupation = value.to_s
-          end
-          if key.to_s == "hometown"
-            if value.to_s == hometown
-              return occupation
-              
+          key.to_s == "occupation"
+          occupation = value.to_s
+
+          key.to_s == "hometown"
+            value.to_s == hometown
+            return occupation
+
           end
         end
       end
