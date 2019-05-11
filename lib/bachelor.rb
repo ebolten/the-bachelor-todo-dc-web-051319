@@ -11,7 +11,7 @@ def get_first_name_of_season_winner(data, season)
             if key.to_s == "status"
               if value.to_s == "Winner"
                 index = name.index(" ")
-                name = name[0..index]
+                name = name[0..index - 1]
                 return name
               end
             end
