@@ -100,7 +100,7 @@ def get_average_age_for_season(data, season)
       end
     end
 
-  return (averageAge / count)
+  return (averageAge / count).to_i
 end
 
 
