@@ -26,25 +26,39 @@ def get_contestant_name(data, occupation)
   # code here
   name = nil
   data.each do |season, info|
-
-        info.each do |element|
-          element.each do |key, value|
-            if key.to_s == "name"
+      info.each do |element|
+        element.each do |key, value|
+          if key.to_s == "name"
             name = value.to_s
           end
-            if key.to_s == "occupation"
-              if value.to_s == occupation
-                return name
-              end
+          if key.to_s == "occupation"
+            if value.to_s == occupation
+              return name
             end
           end
         end
+      end
     end
 end
 
 
 def count_contestants_by_hometown(data, hometown)
   # code here
+  count = 0
+  data.each do |season, info|
+      info.each do |element|
+        element.each do |key, value|
+          if key.to_s == "name"
+            name = value.to_s
+          end
+          if key.to_s == "occupation"
+            if value.to_s == occupation
+              return name
+            end
+          end
+        end
+      end
+    end
 end
 
 def get_occupation(data, hometown)
